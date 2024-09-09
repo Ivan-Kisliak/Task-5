@@ -9,10 +9,16 @@ import Foundation
 
 class Person {
     
-    let name = "Иван"
-    let surname = "Кисляк"
+    let name: String
+    let surname: String
     
     var fullName: String {
         "\(name) \(surname)"
     }
+    
+    init(name: String, surname: String) {
+        self.name = name
+        self.surname = surname
+    }
+    
 }
