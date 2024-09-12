@@ -14,6 +14,16 @@ class ViewController: UIViewController {
     private let firstPerson = Person(name: "Иван", surname: "Иванов")
     private let secondPerson = Person(name: "Петр", surname: "Петров")
     private let thirdPerson = Person(name: "Василий", surname: "Васильев")
+    
+    private lazy var firstUser = User(login: "Ivan",
+                                 password: "123",
+                                 personInfo: firstPerson)
+    private lazy var secondUser = User(login: "Petr",
+                                 password: "456",
+                                 personInfo: secondPerson)
+    private lazy var thirdUser = User(login: "Vas",
+                                      password: "789",
+                                      personInfo: thirdPerson)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +34,9 @@ class ViewController: UIViewController {
     }
     
     private func updateHelper() {
-        helper.addPerson(firstPerson)
-        helper.addPerson(secondPerson)
-        helper.addPerson(thirdPerson)
+        helper.addPerson(firstUser.personInfo)
+        helper.addPerson(secondUser.personInfo)
+        helper.addPerson(thirdUser.personInfo)
     }
     
     private func printPersonFullName() {

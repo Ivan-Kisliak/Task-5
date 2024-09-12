@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0BD34B2C92FE7300D05A26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BD34A2C92FE7300D05A26 /* User.swift */; };
 		2C5ED0B42C8F131F004C6D14 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5ED0B32C8F131F004C6D14 /* Helper.swift */; };
 		2C63E7AE2C87379A00BB0421 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63E7AD2C87379A00BB0421 /* AppDelegate.swift */; };
 		2C63E7B02C87379A00BB0421 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63E7AF2C87379A00BB0421 /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C0BD34A2C92FE7300D05A26 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2C5ED0B32C8F131F004C6D14 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		2C63E7AA2C87379A00BB0421 /* TaskForLesson2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskForLesson2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C63E7AD2C87379A00BB0421 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				2C63E7AF2C87379A00BB0421 /* SceneDelegate.swift */,
 				2C63E7B12C87379A00BB0421 /* ViewController.swift */,
 				2CCCDEB02C8C9F5F005DAC2A /* Person.swift */,
+				2C0BD34A2C92FE7300D05A26 /* User.swift */,
 				2C5ED0B32C8F131F004C6D14 /* Helper.swift */,
 				2C63E7B32C87379A00BB0421 /* Main.storyboard */,
 				2C63E7B62C87379B00BB0421 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			files = (
 				2C63E7B22C87379A00BB0421 /* ViewController.swift in Sources */,
 				2C63E7AE2C87379A00BB0421 /* AppDelegate.swift in Sources */,
+				2C0BD34B2C92FE7300D05A26 /* User.swift in Sources */,
 				2C5ED0B42C8F131F004C6D14 /* Helper.swift in Sources */,
 				2CCCDEB12C8C9F5F005DAC2A /* Person.swift in Sources */,
 				2C63E7B02C87379A00BB0421 /* SceneDelegate.swift in Sources */,
