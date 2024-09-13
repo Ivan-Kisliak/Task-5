@@ -34,13 +34,13 @@ class ViewController: UIViewController {
     }
     
     private func updateHelper() {
-        helper.addPerson(firstUser.personInfo)
-        helper.addPerson(secondUser.personInfo)
-        helper.addPerson(thirdUser.personInfo)
+        helper.addPerson(firstUser)
+        helper.addPerson(secondUser)
+        helper.addPerson(thirdUser)
     }
     
     private func printPersonFullName() {
-        helper.getPerson().forEach { print($0.fullName) }
+        helper.getPerson().forEach { print($0.personInfo.fullName) }
     }
     
 }

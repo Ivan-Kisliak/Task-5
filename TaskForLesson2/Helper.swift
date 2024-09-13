@@ -9,15 +9,13 @@ import Foundation
 
 class Helper {
     
-    var persons: [Person] = []
-    
     var users: [User] = []
     
-    func addPerson(_ person: Person) {
-        persons.append(person)
+    func addPerson(_ person: User) {
+        users.append(person)
     }
     
-    func getPerson() -> [Person] {
-        persons
+    func getPerson() -> [User] {
+        users
     }
 }
