@@ -13,14 +13,8 @@ class ViewController: UIViewController {
     private let userRepository = UserRepository()
     
     private let randomUserLabel = UILabel()
-    
-    private let showFullNameButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Show FullName", for: .normal)
-        button.backgroundColor = .green
-        button.frame = CGRect(x: 100, y: 150, width: 150, height: 50)
-        return button
-    }()
+    private let showFullNameButton = UIButton()
+    private let stackView = UIStackView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +22,7 @@ class ViewController: UIViewController {
         updateHelper()
         printPersonFullName()
         setupView()
-
+        
     }
     
     private func updateHelper() {
@@ -42,19 +36,45 @@ class ViewController: UIViewController {
     private func setupRandomUserLabel() {
         let randomUser = helper.getRandomUser()?.personInfo.fullName
         randomUserLabel.text = randomUser
+        randomUserLabel.textAlignment = .center
         randomUserLabel.font = UIFont.systemFont(ofSize: 25)
         randomUserLabel.textColor = .blue
-        randomUserLabel.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
+    }
+    
+    private func setupShowFullNameButton() {
+        showFullNameButton.setTitle("Show FullName", for: .normal)
+        showFullNameButton.backgroundColor = .systemGreen
+    }
+    
+    private func setupStackView() {
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.spacing = 5
+        
+        stackView.addArrangedSubview(randomUserLabel)
+        stackView.addArrangedSubview(showFullNameButton)
     }
        
     private func setupView() {
-        view.backgroundColor = .lightGray
-//        view.alpha = 0.1 //убрал чтобы видеть label
+        view.backgroundColor = .lightGray.withAlphaComponent(0.9)
         
         setupRandomUserLabel()
-        view.addSubview(randomUserLabel)
-        view.addSubview(showFullNameButton)
+        setupShowFullNameButton()
+        setupStackView()
+        view.addSubview(stackView)
+        setupLayuot()
     }
     
+    private func setupLayuot() {
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.heightAnchor.constraint(equalToConstant: 100),
+            stackView.widthAnchor.constraint(equalToConstant: 150),
+        ])
+    }
 }
 
