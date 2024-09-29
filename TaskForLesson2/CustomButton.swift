@@ -23,6 +23,12 @@ class CustomButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let shadowPath = UIBezierPath(rect: bounds)
+        layer.shadowPath = shadowPath.cgPath
+    }
+    
     private func setupButton(title: String, 
                              backgroundColor: UIColor,
                              isShadow: Bool) {
