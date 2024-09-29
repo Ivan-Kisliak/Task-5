@@ -16,6 +16,7 @@
 		2C63E7BA2C87379B00BB0421 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2C63E7B92C87379B00BB0421 /* Base */; };
 		2CCCDEB12C8C9F5F005DAC2A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCDEB02C8C9F5F005DAC2A /* Person.swift */; };
 		2CFCE5C62C984EF700E738A4 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFCE5C52C984EF700E738A4 /* UserRepository.swift */; };
+		2CFFDC1D2CA83E120007B0EC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFDC1C2CA83E120007B0EC /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2C63E7BB2C87379B00BB0421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CCCDEB02C8C9F5F005DAC2A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2CFCE5C52C984EF700E738A4 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		2CFFDC1C2CA83E120007B0EC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				2C63E7AD2C87379A00BB0421 /* AppDelegate.swift */,
 				2C63E7AF2C87379A00BB0421 /* SceneDelegate.swift */,
 				2C63E7B12C87379A00BB0421 /* ViewController.swift */,
+				2CFFDC1C2CA83E120007B0EC /* CustomButton.swift */,
 				2CCCDEB02C8C9F5F005DAC2A /* Person.swift */,
 				2C0BD34A2C92FE7300D05A26 /* User.swift */,
 				2C5ED0B32C8F131F004C6D14 /* Helper.swift */,
@@ -150,6 +153,7 @@
 				2C63E7AE2C87379A00BB0421 /* AppDelegate.swift in Sources */,
 				2C0BD34B2C92FE7300D05A26 /* User.swift in Sources */,
 				2CFCE5C62C984EF700E738A4 /* UserRepository.swift in Sources */,
+				2CFFDC1D2CA83E120007B0EC /* CustomButton.swift in Sources */,
 				2C5ED0B42C8F131F004C6D14 /* Helper.swift in Sources */,
 				2CCCDEB12C8C9F5F005DAC2A /* Person.swift in Sources */,
 				2C63E7B02C87379A00BB0421 /* SceneDelegate.swift in Sources */,
