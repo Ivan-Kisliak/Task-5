@@ -14,8 +14,7 @@ class ViewController: UIViewController {
     
     private let randomUserLabel = UILabel()
     private let showNewUserButton = CustomButton(title: "Show New User",
-                                                 backgroundColor: .systemRed,
-                                                 isShadow: false)
+                                                 backgroundColor: .systemRed)
     private let hideUserButton = CustomButton(title: "HideUser",
                                               backgroundColor: .systemGreen,
                                               isShadow: true)
@@ -36,36 +35,46 @@ class ViewController: UIViewController {
     private func printPersonFullName() {
         helper.getUsers().forEach { print($0.personInfo.fullName) }
     }
+
+}
+
+//MARK: - Setup View
+private extension ViewController {
     
-    private func setupRandomUserLabel() {
+    func setupView() {
+        view.backgroundColor = .lightGray.withAlphaComponent(Constant.alpha90)
+        
+        setupRandomUserLabel()
+        setupStackView()
+        view.addSubViews([stackView])
+        setupLayuot()
+    }
+    
+    func setupRandomUserLabel() {
         let randomUser = helper.getRandomUser()?.personInfo.fullName
         randomUserLabel.text = randomUser
         randomUserLabel.textAlignment = .center
-        randomUserLabel.font = UIFont.systemFont(ofSize: 25)
+        randomUserLabel.font = UIFont.systemFont(ofSize: Constant.font25)
         randomUserLabel.textColor = .blue
     }
     
-    private func setupStackView() {
+    func setupStackView() {
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
         stackView.spacing = 10
         
-        stackView.addArrangedSubview(randomUserLabel)
-        stackView.addArrangedSubview(showNewUserButton)
-        stackView.addArrangedSubview(hideUserButton)
+        stackView.addArrangedSubviews([randomUserLabel,
+                                       showNewUserButton,
+                                       hideUserButton])
     }
-       
-    private func setupView() {
-        view.backgroundColor = .lightGray.withAlphaComponent(0.9)
-        
-        setupRandomUserLabel()
-        setupStackView()
-        view.addSubview(stackView)
-        setupLayuot()
-    }
+}
+
+//MARK: - Setup Layout
+
+private extension ViewController {
     
-    private func setupLayuot() {
+    func setupLayuot() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -75,5 +84,12 @@ class ViewController: UIViewController {
             stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
         ])
     }
+}
+
+//MARK: - Nested Types
+
+enum Constant {
+    static let font25: CGFloat = 25
+    static let alpha90: CGFloat = 0.9
 }
 

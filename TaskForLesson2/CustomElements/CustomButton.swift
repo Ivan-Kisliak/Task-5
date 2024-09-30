@@ -11,7 +11,7 @@ class CustomButton: UIButton {
     
     private let button = UIButton()
     
-    init(title: String, backgroundColor: UIColor, isShadow: Bool) {
+    init(title: String, backgroundColor: UIColor, isShadow: Bool = false) {
         super.init(frame: .zero)
         
         setupButton(title: title, backgroundColor: backgroundColor, isShadow: isShadow)
@@ -28,8 +28,13 @@ class CustomButton: UIButton {
         let shadowPath = UIBezierPath(rect: bounds)
         layer.shadowPath = shadowPath.cgPath
     }
+}
+
+//MARK: - Setup View
+
+private extension CustomButton {
     
-    private func setupButton(title: String, 
+    func setupButton(title: String,
                              backgroundColor: UIColor,
                              isShadow: Bool) {
         setTitle(title, for: .normal)
@@ -45,8 +50,13 @@ class CustomButton: UIButton {
         
         addSubview(button)
     }
+}
+
+//MARK: - Setup Layout
+
+private extension CustomButton {
     
-    private func setupLayout() {
+    func setupLayout() {
         button.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([

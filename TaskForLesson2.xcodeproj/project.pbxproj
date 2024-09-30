@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C0BD34B2C92FE7300D05A26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BD34A2C92FE7300D05A26 /* User.swift */; };
+		2C56A3772CAB2D9600FDF0E6 /* UIStackView+AddArrangesSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56A3762CAB2D9600FDF0E6 /* UIStackView+AddArrangesSubviews.swift */; };
+		2C56A3792CAB305B00FDF0E6 /* UIView+addSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56A3782CAB305B00FDF0E6 /* UIView+addSubviews.swift */; };
 		2C5ED0B42C8F131F004C6D14 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5ED0B32C8F131F004C6D14 /* Helper.swift */; };
 		2C63E7AE2C87379A00BB0421 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63E7AD2C87379A00BB0421 /* AppDelegate.swift */; };
 		2C63E7B02C87379A00BB0421 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63E7AF2C87379A00BB0421 /* SceneDelegate.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		2C0BD34A2C92FE7300D05A26 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2C56A3762CAB2D9600FDF0E6 /* UIStackView+AddArrangesSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+AddArrangesSubviews.swift"; sourceTree = "<group>"; };
+		2C56A3782CAB305B00FDF0E6 /* UIView+addSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addSubviews.swift"; sourceTree = "<group>"; };
 		2C5ED0B32C8F131F004C6D14 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		2C63E7AA2C87379A00BB0421 /* TaskForLesson2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskForLesson2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C63E7AD2C87379A00BB0421 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C56A37A2CAB371700FDF0E6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C63E7B12C87379A00BB0421 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2C56A37B2CAB374800FDF0E6 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				2CFFDC1C2CA83E120007B0EC /* CustomButton.swift */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		2C56A37C2CAB379000FDF0E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C56A3762CAB2D9600FDF0E6 /* UIStackView+AddArrangesSubviews.swift */,
+				2C56A3782CAB305B00FDF0E6 /* UIView+addSubviews.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2C56A37D2CAB37F200FDF0E6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C5ED0B32C8F131F004C6D14 /* Helper.swift */,
+				2CFCE5C52C984EF700E738A4 /* UserRepository.swift */,
+				2C0BD34A2C92FE7300D05A26 /* User.swift */,
+				2CCCDEB02C8C9F5F005DAC2A /* Person.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2C56A37E2CAB382200FDF0E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C63E7B82C87379B00BB0421 /* LaunchScreen.storyboard */,
+				2C63E7B62C87379B00BB0421 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2C63E7A12C87379A00BB0421 = {
 			isa = PBXGroup;
 			children = (
@@ -66,14 +115,11 @@
 			children = (
 				2C63E7AD2C87379A00BB0421 /* AppDelegate.swift */,
 				2C63E7AF2C87379A00BB0421 /* SceneDelegate.swift */,
-				2C63E7B12C87379A00BB0421 /* ViewController.swift */,
-				2CFFDC1C2CA83E120007B0EC /* CustomButton.swift */,
-				2CCCDEB02C8C9F5F005DAC2A /* Person.swift */,
-				2C0BD34A2C92FE7300D05A26 /* User.swift */,
-				2C5ED0B32C8F131F004C6D14 /* Helper.swift */,
-				2CFCE5C52C984EF700E738A4 /* UserRepository.swift */,
-				2C63E7B62C87379B00BB0421 /* Assets.xcassets */,
-				2C63E7B82C87379B00BB0421 /* LaunchScreen.storyboard */,
+				2C56A37A2CAB371700FDF0E6 /* ViewControllers */,
+				2C56A37B2CAB374800FDF0E6 /* CustomElements */,
+				2C56A37D2CAB37F200FDF0E6 /* Services */,
+				2C56A37E2CAB382200FDF0E6 /* Resources */,
+				2C56A37C2CAB379000FDF0E6 /* Extensions */,
 				2C63E7BB2C87379B00BB0421 /* Info.plist */,
 			);
 			path = TaskForLesson2;
@@ -149,10 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C56A3792CAB305B00FDF0E6 /* UIView+addSubviews.swift in Sources */,
 				2C63E7B22C87379A00BB0421 /* ViewController.swift in Sources */,
 				2C63E7AE2C87379A00BB0421 /* AppDelegate.swift in Sources */,
 				2C0BD34B2C92FE7300D05A26 /* User.swift in Sources */,
 				2CFCE5C62C984EF700E738A4 /* UserRepository.swift in Sources */,
+				2C56A3772CAB2D9600FDF0E6 /* UIStackView+AddArrangesSubviews.swift in Sources */,
 				2CFFDC1D2CA83E120007B0EC /* CustomButton.swift in Sources */,
 				2C5ED0B42C8F131F004C6D14 /* Helper.swift in Sources */,
 				2CCCDEB12C8C9F5F005DAC2A /* Person.swift in Sources */,
