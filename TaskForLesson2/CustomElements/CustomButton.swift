@@ -9,8 +9,6 @@ import UIKit
 
 class CustomButton: UIButton {
     
-    private let button = UIButton()
-    
     init(title: String, backgroundColor: UIColor, isShadow: Bool = false) {
         super.init(frame: .zero)
         
@@ -48,7 +46,7 @@ private extension CustomButton {
             layer.shadowRadius = 10
         }
         
-        addSubview(button)
+
     }
 }
 
@@ -57,13 +55,14 @@ private extension CustomButton {
 private extension CustomButton {
     
     func setupLayout() {
-        button.translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: topAnchor),
-            button.bottomAnchor.constraint(equalTo: bottomAnchor),
-            button.leadingAnchor.constraint(equalTo: leadingAnchor),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor)
+            topAnchor.constraint(equalTo: topAnchor),
+            bottomAnchor.constraint(equalTo: bottomAnchor),
+            leadingAnchor.constraint(equalTo: leadingAnchor),
+            trailingAnchor.constraint(equalTo: trailingAnchor),
+            heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 }

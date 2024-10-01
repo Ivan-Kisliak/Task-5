@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     private let userRepository = UserRepository()
     
     private let randomUserLabel = UILabel()
-    private let showNewUserButton = CustomButton(title: "Show New User",
+    @objc private let showNewUserButton = CustomButton(title: "Show New User",
                                                  backgroundColor: .systemRed)
     private let hideUserButton = CustomButton(title: "HideUser",
                                               backgroundColor: .systemGreen,
@@ -26,6 +26,8 @@ class ViewController: UIViewController {
         updateHelper()
         printPersonFullName()
         setupView()
+        addAction()
+        setupLayuot()
     }
     
     private func updateHelper() {
@@ -35,11 +37,25 @@ class ViewController: UIViewController {
     private func printPersonFullName() {
         helper.getUsers().forEach { print($0.personInfo.fullName) }
     }
-
+    
+    @objc
+    private func showNewUserButtonTapped() {
+        randomUserLabel.text = helper.getRandomUser()?.personInfo.fullName
+    }
 }
 
 //MARK: - Setup View
 private extension ViewController {
+    func addAction() {
+        showNewUserButton.addTarget(self,
+                                    action: #selector(showNewUserButtonTapped),
+                                    for: .touchUpInside)
+        
+        let action = UIAction { _ in
+            self.randomUserLabel.text = ""
+        }
+        hideUserButton.addAction(action, for: .touchUpInside)
+    }
     
     func setupView() {
         view.backgroundColor = .lightGray.withAlphaComponent(Constant.alpha90)
@@ -47,7 +63,6 @@ private extension ViewController {
         setupRandomUserLabel()
         setupStackView()
         view.addSubViews([stackView])
-        setupLayuot()
     }
     
     func setupRandomUserLabel() {
@@ -71,7 +86,6 @@ private extension ViewController {
 }
 
 //MARK: - Setup Layout
-
 private extension ViewController {
     
     func setupLayuot() {
@@ -80,14 +94,13 @@ private extension ViewController {
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2),
             stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            
         ])
     }
 }
 
 //MARK: - Nested Types
-
 enum Constant {
     static let font25: CGFloat = 25
     static let alpha90: CGFloat = 0.9
